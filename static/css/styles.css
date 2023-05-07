@@ -1,0 +1,129 @@
+/* Fonts Import */
+@font-face {
+  font-family: "Magiona Display";
+  src: url("../fonts/MagionaDisplay/Magiona\ Display.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Magiona Display";
+  src: url("../fonts/MagionaDisplay/Magiona\ Display\ Italic.ttf")
+    format("truetype");
+  font-style: italic;
+}
+
+/* Default Colours */
+:root {
+  --palette-black: #1c1c1c;
+  --palette-white: #fafafa;
+  --palette-cream: #fef6e5;
+  --font-display: "Magiona Display", serif;
+}
+
+/* Default Styling */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--palette-black);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+}
+
+.hero-box {
+  height: 100%;
+  width: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-gradients {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  filter: blur(8rem);
+}
+
+#hero-gradient-1 {
+  position: absolute;
+  width: 45rem;
+  height: 40rem;
+  background: #ff6a00;
+  border-radius: 60% 80% 70% 50%;
+  top: -20%;
+  left: 5%;
+}
+
+#hero-gradient-2 {
+  position: absolute;
+  width: 50rem;
+  height: 50rem;
+  background: #F14339;
+  border-radius: 20% 50% 30% 60%;
+  top: -10%;
+  left: 38%;
+}
+
+#hero-gradient-3 {
+  position: absolute;
+  width: 60rem;
+  height: 45rem;
+  background: #ee0979;
+  border-radius: 100%;
+  top: -10%;
+  right: -15%;
+}
+
+#hero-gradient-4 {
+  position: absolute;
+  width: 50rem;
+  height: 60rem;
+  background: #ee0979;
+  border-radius: 50% 70% 30% 60%;
+  bottom: -35%;
+  left: -15%;
+}
+
+#hero-gradient-5 {
+  position: absolute;
+  width: 50rem;
+  height: 50rem;
+  background: #F14339;
+  border-radius: 80% 40% 50% 40%;
+  bottom: -35%;
+  left: 25%;
+}
+
+#hero-gradient-6 {
+  position: absolute;
+  width: 60rem;
+  height: 60rem;
+  background: #ff6a00;
+  border-radius: 40% 80% 50% 70%;
+  bottom: -50%;
+  right: -5%;
+}
+
+.hero-content {
+  padding-top: 35rem;
+}
+
+.hero-text {
+  font-family: var(--font-display);
+  color: var(--palette-cream);
+  font-size: 8rem;
+  text-align: center;
+}
