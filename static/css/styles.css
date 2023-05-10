@@ -1,4 +1,5 @@
 /* Fonts Import */
+/* Magiona Display */
 @font-face {
   font-family: "Magiona Display";
   src: url("../fonts/MagionaDisplay/Magiona\ Display.ttf") format("truetype");
@@ -11,18 +12,36 @@
   font-style: italic;
 }
 
+/* Open Sans */
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans/OpenSans-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-weight: 300 800;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans/OpenSans-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-weight: 300 800;
+  font-style: italic;
+}
+
 /* Default Colours */
 :root {
   --palette-black: #1c1c1c;
   --palette-white: #fafafa;
   --palette-cream: #fef6e5;
   --font-display: "Magiona Display", serif;
+  --font-sans: "Open Sans", sans-serif;
 }
 
 /* Default Styling */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -34,11 +53,61 @@ body {
   background-color: var(--palette-black);
 }
 
+/* Navigation Bar */
+.navbar img {
+  height: 7rem;
+  width: 7rem;
+}
+
+.navbar .container-fluid {
+  padding: 2.5rem 5rem;
+}
+
+.navbar .nav-item {
+  padding-right: 4rem;
+}
+
+.navbar .nav-item a {
+  font-family: var(--font-sans);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--palette-cream);
+  position: relative;
+}
+
+.hover-overlay::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.hover-overlay:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.hover-overlay::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: #654ea3;
+  opacity: 0.6;
+  z-index: -1;
+  transition: transform 0.2s ease;
+}
+
 /* Hero Section */
 .hero {
   height: 100vh;
   width: 100%;
   padding: 1.2rem 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .hero-box {
@@ -47,6 +116,7 @@ body {
   border-radius: 1.5rem;
   overflow: hidden;
   position: relative;
+  background-image: url("../images/grain.svg");
 }
 
 .hero-gradients {
@@ -71,7 +141,7 @@ body {
   position: absolute;
   width: 50rem;
   height: 50rem;
-  background: #F14339;
+  background: #f14339;
   border-radius: 20% 50% 30% 60%;
   top: -10%;
   left: 38%;
@@ -101,7 +171,7 @@ body {
   position: absolute;
   width: 50rem;
   height: 50rem;
-  background: #F14339;
+  background: #f14339;
   border-radius: 80% 40% 50% 40%;
   bottom: -35%;
   left: 25%;
@@ -118,12 +188,84 @@ body {
 }
 
 .hero-content {
-  padding-top: 35rem;
+  padding-top: 22rem;
 }
 
 .hero-text {
   font-family: var(--font-display);
   color: var(--palette-cream);
-  font-size: 8rem;
+  font-size: 10rem;
   text-align: center;
+}
+
+/* About Me Section */
+.about-me {
+  padding: 50rem 0 10rem 0;
+  font-family: var(--font-sans);
+  color: var(--palette-cream);
+}
+
+.about-me-title {
+  padding-bottom: 2rem;
+}
+
+.about-me h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+}
+
+.about-me p {
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 0 18rem;
+}
+
+@media (max-width: 1200px) {
+  .about-me p {
+    padding: 0 10rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-me p {
+    padding: 0;
+  }
+}
+
+#fullname {
+  background-color: #654ea3;
+}
+
+.blob-img::before {
+  content: "";
+  width: 22rem;
+  height: 22rem;
+  background-image: url("../images/me.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+  will-change: border-radius, transform, opacity;
+  animation: sliderShape 5s linear infinite;
+  display: block;
+  z-index: -1;
+  -webkit-animation: sliderShape 5s linear infinite;
+}
+@keyframes sliderShape {
+  0%,
+  100% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+  34% {
+    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+  }
 }
