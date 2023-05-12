@@ -1,0 +1,236 @@
+/* Hero Section */
+.hero {
+  height: 100vh;
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-box {
+  height: 100%;
+  width: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  background-image: url("../images/grain.svg");
+}
+
+.hero-gradients {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  filter: blur(8rem);
+}
+
+#hero-gradient-1 {
+  position: absolute;
+  width: 45rem;
+  height: 40rem;
+  background: var(--palette-orange);
+  border-radius: 60% 80% 70% 50%;
+  top: -20%;
+  left: 5%;
+}
+
+#hero-gradient-2 {
+  position: absolute;
+  width: 50rem;
+  height: 50rem;
+  background: var(--palette-red);
+  border-radius: 20% 50% 30% 60%;
+  top: -10%;
+  left: 38%;
+}
+
+#hero-gradient-3 {
+  position: absolute;
+  width: 60rem;
+  height: 45rem;
+  background: var(--palette-pink);
+  border-radius: 100%;
+  top: -10%;
+  right: -15%;
+}
+
+#hero-gradient-4 {
+  position: absolute;
+  width: 50rem;
+  height: 60rem;
+  background: var(--palette-pink);
+  border-radius: 50% 70% 30% 60%;
+  bottom: -35%;
+  left: -15%;
+}
+
+#hero-gradient-5 {
+  position: absolute;
+  width: 50rem;
+  height: 50rem;
+  background: var(--palette-red);
+  border-radius: 80% 40% 50% 40%;
+  bottom: -35%;
+  left: 25%;
+}
+
+#hero-gradient-6 {
+  position: absolute;
+  width: 60rem;
+  height: 60rem;
+  background: var(--palette-orange);
+  border-radius: 40% 80% 50% 70%;
+  bottom: -50%;
+  right: -5%;
+}
+
+.hero-content {
+  padding-top: 22rem;
+}
+
+.hero-text {
+  font-family: var(--font-display);
+  color: var(--palette-cream);
+  font-size: 10rem;
+  text-align: center;
+}
+
+.mouse {
+  position: relative;
+}
+
+.mouse a {
+  padding-top: 6rem;
+}
+
+.mouse a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 5rem;
+  height: 7rem;
+  margin-left: -3.3rem;
+  border: 2px solid var(--palette-cream);
+  border-radius: 5rem;
+}
+
+.mouse a span::before {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-left: -0.4rem;
+  background-color: var(--palette-cream);
+  border-radius: 100%;
+  -webkit-animation: point 2s infinite;
+  animation: point 2s infinite;
+}
+
+@-webkit-keyframes point {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: translate(0, 4rem);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes point {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    transform: translate(0, 4rem);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* About Me Section */
+.about-me {
+  padding: 50rem 0 10rem 0;
+  font-family: var(--font-sans);
+  color: var(--palette-cream);
+}
+
+.about-me-title {
+  padding-bottom: 2rem;
+}
+
+.about-me h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+}
+
+.about-me p {
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 0 18rem;
+}
+
+@media (max-width: 1200px) {
+  .about-me p {
+    padding: 0 10rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-me p {
+    padding: 0;
+  }
+}
+
+#fullname {
+  background-color: #654ea3;
+}
+
+.blob-img::before {
+  content: "";
+  width: 22rem;
+  height: 22rem;
+  background-image: url("../images/me.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+  will-change: border-radius, transform, opacity;
+  animation: sliderShape 5s linear infinite;
+  display: block;
+  z-index: -1;
+  -webkit-animation: sliderShape 5s linear infinite;
+}
+@keyframes sliderShape {
+  0%,
+  100% {
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+  34% {
+    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+    transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+  }
+  50% {
+    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+  }
+}

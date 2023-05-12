@@ -1,5 +1,4 @@
-/* Fonts Import */
-/* Magiona Display */
+/* Font: Magiona Display */
 @font-face {
   font-family: "Magiona Display";
   src: url("../fonts/MagionaDisplay/Magiona\ Display.ttf") format("truetype");
@@ -12,7 +11,7 @@
   font-style: italic;
 }
 
-/* Open Sans */
+/* Font: Open Sans */
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans/OpenSans-VariableFont_wdth,wght.ttf")
@@ -33,6 +32,20 @@
   --palette-black: #1c1c1c;
   --palette-white: #fafafa;
   --palette-cream: #fef6e5;
+  --palette-darkpurple: #24243e;
+  --palette-purple: #654ea3;
+  --palette-blue: #2F58CD;
+  --palette-teal: #1C82AD;
+  --palette-green: #16C79A;
+  --palette-lime: #7DE271;
+  --palette-yellow: #F0FF42;
+  --palette-amber: #FFD93D;
+  --palette-orange: #FFA521;
+  --palette-orangered: #FF6A00;
+  --palette-red: #F14339;
+  --palette-pink: #EE0979;
+  --palette-magenta: #A52E90;
+  --palette-plum: #642967;
   --font-display: "Magiona Display", serif;
   --font-sans: "Open Sans", sans-serif;
 }
@@ -57,6 +70,13 @@ body {
 .navbar img {
   height: 7rem;
   width: 7rem;
+  transition: all 0.5s;
+}
+
+.navbar img:hover {
+  /* transform: rotate(720deg); */
+  scale: 1.1;
+  transition: all 0.2s;
 }
 
 .navbar .container-fluid {
@@ -75,6 +95,7 @@ body {
   position: relative;
 }
 
+/* Hover Overlay Effect */
 .hover-overlay::before {
   transform: scaleX(0);
   transform-origin: bottom right;
@@ -94,178 +115,23 @@ body {
   bottom: 0;
   left: 0;
   inset: 0 0 0 0;
-  background: #654ea3;
+  background: var(--palette-purple);
   opacity: 0.6;
   z-index: -1;
   transition: transform 0.2s ease;
 }
 
-/* Hero Section */
-.hero {
-  height: 100vh;
-  width: 100%;
-  padding: 1.2rem 1.5rem;
-  position: absolute;
-  top: 0;
-  left: 0;
+/* Text Fade on Scroll Effect */
+.text-animate-hide {
+  opacity: 0;
+  filter: blur(0.2rem);
+  transform: translateY(10%);
+  transition: all 0.8s;
 }
 
-.hero-box {
-  height: 100%;
-  width: 100%;
-  border-radius: 1.5rem;
-  overflow: hidden;
-  position: relative;
-  background-image: url("../images/grain.svg");
+.text-animate-show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
 }
 
-.hero-gradients {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-  filter: blur(8rem);
-}
-
-#hero-gradient-1 {
-  position: absolute;
-  width: 45rem;
-  height: 40rem;
-  background: #ff6a00;
-  border-radius: 60% 80% 70% 50%;
-  top: -20%;
-  left: 5%;
-}
-
-#hero-gradient-2 {
-  position: absolute;
-  width: 50rem;
-  height: 50rem;
-  background: #f14339;
-  border-radius: 20% 50% 30% 60%;
-  top: -10%;
-  left: 38%;
-}
-
-#hero-gradient-3 {
-  position: absolute;
-  width: 60rem;
-  height: 45rem;
-  background: #ee0979;
-  border-radius: 100%;
-  top: -10%;
-  right: -15%;
-}
-
-#hero-gradient-4 {
-  position: absolute;
-  width: 50rem;
-  height: 60rem;
-  background: #ee0979;
-  border-radius: 50% 70% 30% 60%;
-  bottom: -35%;
-  left: -15%;
-}
-
-#hero-gradient-5 {
-  position: absolute;
-  width: 50rem;
-  height: 50rem;
-  background: #f14339;
-  border-radius: 80% 40% 50% 40%;
-  bottom: -35%;
-  left: 25%;
-}
-
-#hero-gradient-6 {
-  position: absolute;
-  width: 60rem;
-  height: 60rem;
-  background: #ff6a00;
-  border-radius: 40% 80% 50% 70%;
-  bottom: -50%;
-  right: -5%;
-}
-
-.hero-content {
-  padding-top: 22rem;
-}
-
-.hero-text {
-  font-family: var(--font-display);
-  color: var(--palette-cream);
-  font-size: 10rem;
-  text-align: center;
-}
-
-/* About Me Section */
-.about-me {
-  padding: 50rem 0 10rem 0;
-  font-family: var(--font-sans);
-  color: var(--palette-cream);
-}
-
-.about-me-title {
-  padding-bottom: 2rem;
-}
-
-.about-me h2 {
-  font-size: 4rem;
-  font-weight: 600;
-  letter-spacing: 0.5rem;
-}
-
-.about-me p {
-  font-size: 2rem;
-  font-weight: 300;
-  padding: 0 18rem;
-}
-
-@media (max-width: 1200px) {
-  .about-me p {
-    padding: 0 10rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .about-me p {
-    padding: 0;
-  }
-}
-
-#fullname {
-  background-color: #654ea3;
-}
-
-.blob-img::before {
-  content: "";
-  width: 22rem;
-  height: 22rem;
-  background-image: url("../images/me.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
-  will-change: border-radius, transform, opacity;
-  animation: sliderShape 5s linear infinite;
-  display: block;
-  z-index: -1;
-  -webkit-animation: sliderShape 5s linear infinite;
-}
-@keyframes sliderShape {
-  0%,
-  100% {
-    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
-  }
-  34% {
-    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
-    transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
-  }
-  50% {
-    transform: translate3d(0, 0, 0) rotateZ(0.01deg);
-  }
-  67% {
-    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
-    transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
-  }
-}

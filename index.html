@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="static/css/styles.css" />
+    <link rel="stylesheet" href="static/css/index.css" />
 
     <title>DFAB-Ferguson</title>
     <link rel="icon" href="static/images/f logo.svg" />
@@ -24,10 +25,10 @@
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link hover-overlay" href="#about-me">about me</a>
+              <a class="nav-link hover-overlay" href="index.html#about-me">about me</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link hover-overlay" href="index.html">blog</a>
+              <a class="nav-link hover-overlay" href="blog.html">blog</a>
             </li>
           </ul>
         </div>
@@ -47,15 +48,19 @@
       </div>
     </div>
 
-    <div class="container hero-content">
+    <div class="container hero-content text-animate-hide">
       <h1 class="hero-text">hi, i'm Ferguson</h1>
-      <div class="mouse"></div>
+      <div class="mouse">
+        <a href="#about-me">
+          <span></span>
+        </a>
+      </div>
     </div>
 
     <div class="container about-me">
       <div class="row">
         <div class="col-12">
-          <div class="row justify-content-center align-items-center about-me-title">
+          <div class="row justify-content-center align-items-center about-me-title text-animate-hide">
             <div class="col-5">
               <h2 class="text-end align-middle">ABOUT</h2>
             </div>
@@ -66,7 +71,7 @@
               <h2>ME</h2>
             </div>
           </div>
-          <p class="text-center"  id="about-me">
+          <p class="text-center text-animate-hide" id="about-me">
             Hey there! My name is <span id='fullname'>Ferguson Emmanuel Fernandez</span>, and I'm an
             Applied AI and Analytics undergraduate from Singapore Polytechnic.
             I'm excited to be currently taking the Digital Fabrication &
@@ -85,6 +90,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.0.4/dist/gsap.min.js"></script>
     <script src="static/js/gradients.js"></script>
+    <script src="static/js/scroll-text.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
