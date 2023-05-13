@@ -21,7 +21,7 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans/OpenSans-VariableFont_wdth,wght.ttf")
+  src: url("../fonts/OpenSans/OpenSans-Italic-VariableFont_wdth,wght.ttf")
     format("truetype");
   font-weight: 300 800;
   font-style: italic;
@@ -34,17 +34,17 @@
   --palette-cream: #fef6e5;
   --palette-darkpurple: #24243e;
   --palette-purple: #654ea3;
-  --palette-blue: #2F58CD;
-  --palette-teal: #1C82AD;
-  --palette-green: #16C79A;
-  --palette-lime: #7DE271;
-  --palette-yellow: #F0FF42;
-  --palette-amber: #FFD93D;
-  --palette-orange: #FFA521;
-  --palette-orangered: #FF6A00;
-  --palette-red: #F14339;
-  --palette-pink: #EE0979;
-  --palette-magenta: #A52E90;
+  --palette-blue: #2f58cd;
+  --palette-teal: #1c82ad;
+  --palette-green: #16c79a;
+  --palette-lime: #7de271;
+  --palette-yellow: #f0ff42;
+  --palette-amber: #ffd93d;
+  --palette-orange: #ffa521;
+  --palette-orangered: #ff6a00;
+  --palette-red: #f14339;
+  --palette-pink: #ee0979;
+  --palette-magenta: #a52e90;
   --palette-plum: #642967;
   --font-display: "Magiona Display", serif;
   --font-sans: "Open Sans", sans-serif;
@@ -60,6 +60,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -67,6 +68,7 @@ body {
 }
 
 /* Navigation Bar */
+
 .navbar img {
   height: 7rem;
   width: 7rem;
@@ -74,7 +76,6 @@ body {
 }
 
 .navbar img:hover {
-  /* transform: rotate(720deg); */
   scale: 1.1;
   transition: all 0.2s;
 }
@@ -134,4 +135,3 @@ body {
   filter: blur(0);
   transform: translateY(0);
 }
-

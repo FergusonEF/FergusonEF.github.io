@@ -86,13 +86,13 @@
 }
 
 .hero-content {
-  padding-top: 22rem;
+  padding-top: 20rem;
 }
 
 .hero-text {
   font-family: var(--font-display);
   color: var(--palette-cream);
-  font-size: 10rem;
+  font-size: 11rem;
   text-align: center;
 }
 
@@ -209,6 +209,7 @@
   background-image: url("../images/me.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
   will-change: border-radius, transform, opacity;
   animation: sliderShape 5s linear infinite;

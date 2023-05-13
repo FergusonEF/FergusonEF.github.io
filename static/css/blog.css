@@ -16,6 +16,11 @@
   padding-bottom: 0.5rem;
 }
 
+.sidebar h3 a {
+    text-decoration: none;
+    color: var(--palette-cream);
+}
+
 .sidebar .nav-item {
   margin-right: auto;
 }
@@ -23,43 +28,52 @@
 .sidebar .nav-item a {
   position: relative;
   font-size: 1.6rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 /* Blog Section */
+.blog-content .row {
+  min-height: 100vh;
+  transition: background-color 1.5s ease;
+  padding: 15rem 0;
+}
+
 .blog-content .col-12 {
-  padding-left: 25rem;
+  padding: 0 10rem 0 35rem;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .blog-content .col-12 {
+        padding: 0 5rem 0 5rem;
+    }
 }
 
 .blog-content h2 {
   font-family: var(--font-display);
   font-size: 10rem;
-  padding: 0 10rem;
 }
 
 .blog-content p {
   font-family: var(--font-sans);
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 400;
-  padding: 0 10rem;
+  padding-bottom: 1rem;
 }
 
 .blog-content .row:nth-child(1) {
   margin-top: -13.6rem;
 }
 
-.blog-content .row {
-  min-height: 100vh;
-  transition: background-color 2s ease;
-  padding: 15rem 0;
-}
-
 .textcolor-light {
-    color: var(--palette-cream);
+  color: var(--palette-cream);
 }
 
 .textcolor-dark {
-    color: var(--palette-black);
+  color: var(--palette-black);
 }
 
 .color-darkpurple {
