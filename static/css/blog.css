@@ -35,7 +35,7 @@
 .blog-content .row {
   min-height: 100vh;
   transition: background-color 1.5s ease;
-  padding: 15rem 0;
+  padding: 15rem 0 0 0;
 }
 
 .blog-content .col-12 {
