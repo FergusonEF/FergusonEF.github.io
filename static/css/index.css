@@ -165,7 +165,7 @@
 
 /* About Me Section */
 .about-me {
-  padding: 50rem 0 10rem 0;
+  padding-top: 50rem;
   font-family: var(--font-sans);
   color: var(--palette-cream);
 }
@@ -183,18 +183,18 @@
 .about-me p {
   font-size: 2rem;
   font-weight: 300;
-  padding: 0 18rem;
+  padding: 0 18rem 1rem 18rem;
 }
 
 @media (max-width: 1200px) {
   .about-me p {
-    padding: 0 10rem;
+    padding: 0 10rem 1rem 10rem;
   }
 }
 
 @media (max-width: 992px) {
   .about-me p {
-    padding: 0;
+    padding: 0 0 1rem 0;
   }
 }
 
@@ -234,4 +234,33 @@
     border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
     transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
   }
+}
+
+/* Contact Section */
+.contact {
+  padding: 10rem 0 5rem 0;
+  font-family: var(--font-sans);
+  color: var(--palette-cream);
+}
+
+.contact h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+}
+
+.links a {
+  padding: 0 0.5rem;
+  transition: scale 0.5s ease;
+}
+
+.links a:hover {
+  scale: 1.1;
+  transition: scale 0.5s ease;
+  filter: brightness(0) saturate(100%) invert(37%) sepia(12%) saturate(2334%) hue-rotate(215deg) brightness(92%) contrast(99%);
 }
